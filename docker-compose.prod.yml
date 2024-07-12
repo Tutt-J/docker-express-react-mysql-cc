@@ -1,8 +1,8 @@
 services:
   back:
     environment:
-      - ORIGIN=165.22.65.128
+      - ORIGIN=165.22.65.128:8080
 
   front:
     environment:
-      - VITE_API_URL=165.22.65.128
+      - VITE_API_URL=165.22.65.128:3000
