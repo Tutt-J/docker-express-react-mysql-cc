@@ -1,0 +1,8 @@
+services:
+  back:
+    environment:
+      - ORIGIN=http://localhost:8080
+
+  front:
+    environment:
+      - VITE_API_URL=http://localhost:3000

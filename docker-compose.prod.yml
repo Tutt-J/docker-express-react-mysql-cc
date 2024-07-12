@@ -1,0 +1,8 @@
+services:
+  back:
+    environment:
+      - ORIGIN=165.22.65.128
+
+  front:
+    environment:
+      - VITE_API_URL=165.22.65.128
