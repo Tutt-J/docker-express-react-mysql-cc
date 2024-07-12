@@ -3,8 +3,22 @@ services:
     environment:
       - ORIGIN=http://localhost:8080
       - NODE_ENV=development
+    develop:
+      watch:
+        - path: ./back/
+          target: /app/
+          action: sync
+        - path: ./back/package.json
+          action: rebuild
 
   front:
     environment:
       - VITE_API_URL=http://localhost:3000
       - NODE_ENV=development
+    develop:
+      watch:
+        - path: ./front/
+          target: /app/
+          action: sync
+        - path: ./front/package.json
+          action: rebuild

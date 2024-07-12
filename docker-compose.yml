@@ -31,13 +31,6 @@ services:
       - DB_database=db_express
       - DB_dialect=mysql
       - DB_port=3306
-    develop:
-      watch:
-        - path: ./back/
-          target: /app/
-          action: sync
-        - path: ./back/package.json
-          action: rebuild
     depends_on:
       mysql-express:
         condition: service_healthy
@@ -49,13 +42,6 @@ services:
     container_name: front-react
     ports:
       - 8080:8080
-    develop:
-      watch:
-        - path: ./front/
-          target: /app/
-          action: sync
-        - path: ./front/package.json
-          action: rebuild
     depends_on:
       - back
 
