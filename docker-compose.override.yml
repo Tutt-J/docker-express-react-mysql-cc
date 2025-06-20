@@ -1,8 +1,5 @@
 services:
   back:
-    environment:
-      - ORIGIN=http://localhost:8080
-      - NODE_ENV=development
     develop:
       watch:
         - path: ./back/
@@ -12,9 +9,6 @@ services:
           action: rebuild
 
   front:
-    environment:
-      - VITE_API_URL=http://localhost:3000
-      - NODE_ENV=development
     develop:
       watch:
         - path: ./front/

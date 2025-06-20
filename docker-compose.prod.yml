@@ -1,12 +1,6 @@
 services:
   back:
-    environment:
-      - ORIGIN=http://165.232.75.165:8080
-      - NODE_ENV=production
     command: ["npm", "run", "start"]
 
   front:
-    environment:
-      - VITE_API_URL=http://165.232.75.165:3000
-      - NODE_ENV=production
     command: ["npm", "run", "prod"]

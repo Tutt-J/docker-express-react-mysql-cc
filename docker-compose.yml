@@ -35,6 +35,8 @@ services:
     container_name: front-react
     ports:
       - 8080:8080
+    env_file:
+      - ./front/.env
     depends_on:
       - back
 
